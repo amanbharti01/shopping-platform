@@ -48,3 +48,23 @@ Kubernetes / Minikube
     |
     v
 Shopping Platform
+
+## 📁 Project Structure
+
+```text
+shopping-platform/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── app/
+│   ├── public/
+│   │   └── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
+├── k8s/
+│   ├── deployment.yaml
+│   └── service.yaml
+├── .gitignore
+├── Dockerfile
+└── README.md
