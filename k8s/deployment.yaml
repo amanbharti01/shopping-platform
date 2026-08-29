@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: shopping-platform
-          image: ghcr.io/amanbharti01/shopping-platform:652d582bc9cbefd87c1882bf727c0d24470eefb9
+          image: ghcr.io/amanbharti01/shopping-platform:4d113317f5c8fa3934944491fe9b966417be5aaa
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
