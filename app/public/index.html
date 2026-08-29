@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Boutique</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 45px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      font-weight: normal;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    select {
+      padding: 8px 18px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: white;
+    }
+
+    .cart {
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: calc(100vh - 70px);
+    }
+
+    .sidebar {
+      background: #f3f3f3;
+      padding: 35px;
+    }
+
+    .category {
+      background: #35108f;
+      color: white;
+      padding: 14px 30px;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, #f5f5f5, #dedede);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .hero-content h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .hero-content p {
+      color: #666;
+      font-size: 18px;
+    }
+
+    main {
+      padding: 40px 55px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+    }
+
+    .product-image {
+      height: 180px;
+      border-radius: 28px;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 75px;
+      margin-bottom: 12px;
+    }
+
+    .product h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .price {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .buy-button {
+      margin-top: 10px;
+      padding: 8px 14px;
+      border: none;
+      background: #35108f;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .buy-button:hover {
+      opacity: 0.85;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 0 20px;
+      }
+
+      main {
+        padding: 25px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        height: 220px;
+      }
+
+      .hero-content h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      ◇ ONLINE<span>BOUTIQUE</span>
+    </div>
+
+    <div class="header-right">
+      <select>
+        <option>USD</option>
+        <option>EUR</option>
+        <option>INR</option>
+      </select>
+
+      <div class="cart" id="cart">
+        🛒
+        <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="category">local</div>
+
+      <div class="hero">
+        <div class="hero-content">
+          <h1>STYLE</h1>
+          <p>Simple. Modern. Everyday.</p>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <h2 class="section-title">Hot Products</h2>
+
+      <div class="products">
+
+        <div class="product">
+          <div class="product-image">🕶️</div>
+          <h3>Sunglasses</h3>
+          <div class="price">$19.99</div>
+          <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <div class="product-image">👕</div>
+          <h3>Tank Top</h3>
+          <div class="price">$18.99</div>
+          <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <div class="product-image">⌚</div>
+          <h3>Watch</h3>
+          <div class="price">$109.99</div>
+          <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <div class="product-image">👟</div>
+          <h3>Shoes</h3>
+          <div class="price">$49.99</div>
+          <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <div class="product-image">💨</div>
+          <h3>Hair Dryer</h3>
+          <div class="price">$39.99</div>
+          <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <div class="product-image">🏺</div>
+          <h3>Home Decor</h3>
+          <div class="price">$29.99</div>
+          <button class="buy-button">Add to Cart</button>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    let cartCount = 0;
+
+    const buttons = document.querySelectorAll(".buy-button");
+    const cartCountElement = document.getElementById("cart-count");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        cartCount++;
+        cartCountElement.textContent = cartCount;
+      });
+    });
+  </script>
+
+</body>
+</html>
